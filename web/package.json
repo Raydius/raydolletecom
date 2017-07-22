@@ -1,0 +1,11 @@
+{
+  "name": "raydolletecom",
+  "version": "1.0.0",
+  "description": "Homepage for Ray Dollete",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ray Dollete <rjdollete@gmail.com>",
+  "license": "ISC"
+}
