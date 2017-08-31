@@ -137,3 +137,7 @@ article.post img {
  margin-top:10px;
  margin-bottom:10px;
 }
+
+.lightwidget-wrapper {
+    padding:0 14px;
+}
