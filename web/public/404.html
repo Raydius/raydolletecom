@@ -1,0 +1,41 @@
+Html Webpack Plugin:
+<pre>
+  TypeError: /Users/rdollete/Dev/pheno-com/views/error.jade:5
+      3| block content
+      4|   h1= message
+    > 5|   h2= error.status
+      6|   pre #{error.stack}
+      7|   p Error.
+  Cannot read property 'status' of undefined
+  
+  - error.jade:409 
+    /Users/rdollete/Dev/pheno-com/views/error.jade:409:61
+  
+  - error.jade:603 template
+    /Users/rdollete/Dev/pheno-com/views/error.jade:603:23
+  
+  - index.js:246 
+    [pheno-com]/[html-webpack-plugin]/index.js:246:16
+  
+  - util.js:16 tryCatcher
+    [pheno-com]/[bluebird]/js/release/util.js:16:23
+  
+  - promise.js:502 Promise._settlePromiseFromHandler
+    [pheno-com]/[bluebird]/js/release/promise.js:502:31
+  
+  - promise.js:559 Promise._settlePromise
+    [pheno-com]/[bluebird]/js/release/promise.js:559:18
+  
+  - promise.js:596 Promise._settlePromiseCtx
+    [pheno-com]/[bluebird]/js/release/promise.js:596:10
+  
+  - async.js:143 Async._drainQueue
+    [pheno-com]/[bluebird]/js/release/async.js:143:12
+  
+  - async.js:148 Async._drainQueues
+    [pheno-com]/[bluebird]/js/release/async.js:148:10
+  
+  - async.js:17 Immediate.Async.drainQueues [as _onImmediate]
+    [pheno-com]/[bluebird]/js/release/async.js:17:14
+  
+</pre>

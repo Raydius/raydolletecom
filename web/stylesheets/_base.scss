@@ -1,0 +1,589 @@
+* {
+	margin: 0;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: initial;
+  position: relative;
+  font-family: $primary_font;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  &.opend {
+  	overflow: hidden;
+  	position: relative;
+  }
+}
+body {
+	//display: none;
+
+	&.opend {
+		overflow: hidden;
+		.body-wrapper {
+	    	left: 80%;
+	    	box-shadow: 0 0 20px rgba(0,0,0,0.2);
+	    }
+	    .drawer {
+	    	animation: showDrawers 0.3s forwards;
+	    	animation-delay: 0.1s;
+	    	z-index: -1;
+	    	display: block;
+	    }
+	}
+	&.loaded {
+		display: block;
+	}
+}
+@keyframes showDrawers {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		z-index: 999;
+	}
+}
+
+.body-wrapper{
+    background-color: #FFF;
+    font-family: $primary_font;
+    border-bottom: 8px solid $primary_color;
+    position: relative;
+    transition: left 0.15s ease-in-out;
+    left: 0;
+    min-height: 100%;
+}
+.red {
+	color: $primary_color;
+}
+a, .a, .link{
+
+	&.red {
+		color: $primary_color;
+		font-family: "Circular-bold";
+	}
+}
+blockquote {
+	padding: 10px 0;
+}
+h1 {
+  margin: 0;
+  line-height: 50px;
+
+  a {
+    color: $logo_color;
+    &:hover{
+      color: $logo_color;
+    }
+  }
+
+  sub{
+    bottom: 0;
+    font-size: 12px;
+    vertical-align: baseline;
+  }
+}
+legend {
+	display: block;
+	border: 0;
+	font-size: 14px;
+}
+article p {
+	font-size: 16px;
+	line-height: 26px;
+
+	&:last-of-type {
+		margin-bottom: $base_spacing;
+		@media screen and (max-width: 640px) {
+			margin: 0 0 10px;
+		}
+	}
+
+	&.red {
+		color: $primary_color;
+	}
+	span {
+		font-weight: normal;
+	    display: block;
+	}
+}
+
+.mono_font {
+	font-family: $monospace_font;
+}
+
+.clear {
+	clear: both;
+}
+.loading-box {
+  display:block;
+  height:400px;
+}
+figcaption {
+	h3 {
+		font-family: $secondary_font;
+		font-size: 32px;
+	}
+
+}
+.top-main {
+	position: relative;
+	border-bottom: 1px solid $gray_border_color !important;
+	padding: ($base_spacing - 20) 0;
+	margin-top: $fix_header_height;
+	@media screen and (max-width: 640px) {
+		margin-top: 0;
+	}
+	h2 {
+		margin-top: 0;
+		margin-bottom: 0px;
+		font-weight: normal;
+	}
+}
+cite {
+	color: $gray_font;
+	font-size: 14px;
+	display: block;
+	margin-top: 5px;
+	font-family: $primary_font;
+	font-style: normal;
+	display: table;
+	&:before {
+		content: "\2014 \2009";
+		content: none;
+	}
+	.wrapper {
+		display: table-cell;
+		vertical-align: middle;
+		span {
+			display: block;
+			&:first-of-type {
+				font-family: "Circular-bold";
+			}
+
+		}
+		span {
+			&:last-of-type {
+				color: #333;
+				opacity: 0.75;
+				display: block;
+				font-family: "Circular-book";
+			}
+		}
+	}
+	span {
+		display: block;
+	}
+	img {
+		width: 50px;
+		float: left;
+		margin-right: 10px;
+	}
+}
+h2 blockquote, h3 blockquote, h1 blockquote  {
+	font-size: 40px;
+	border-left: 0;
+	position: relative;
+	font-family: $secondary_font;
+	&:before {
+		content: "";
+		// display: block;
+		content: "\201C";
+		font-size: inherit;
+		position: absolute;
+		left: -15px;
+		// top: 10px;
+		color: inherit;
+	}
+	&:last-letter {
+		color: red;
+	}
+}
+h3 blockquote {
+	font-size: 22px;
+	line-height: 28px;
+	width: 400px;
+	color: #333;
+	&:before {
+		color: inherit;
+	}
+}
+.social{
+
+	ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li{
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		margin: 0 ($base_spacing/4);
+		&:first-child{
+			margin-left: 0;
+		}
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+	a {
+		display: block;
+		height: 100%;
+		width: 100%;
+		color: $gray_color;
+		font-size: 27px;
+		text-align: center;
+		line-height: 60px;
+		@include border-radius(50%);
+		transition: border-color .15s ease-in-out, color .15s ease-in-out;
+
+		&:hover{
+			border-color: $primary_color;
+			color: $primary_color;
+		}
+	}
+}
+.owl-wrapper, .owl-item {
+	transition: all 0.3s!important;
+}
+
+.fix-images {
+	position: fixed;
+    top: 0;
+}
+.backtotop {
+	text-align: center;
+	margin: $base_spacing 0;
+	cursor: pointer;
+
+	.icon-right-arrow {
+		display: inline-block;
+		transform: rotate(-90deg);
+		-webkit-transform: rotate(-90deg);
+		font-size: 24px;
+		margin-bottom: 15px;
+		color: #ccc;
+	}
+	span {
+		font-family: $monospace_font;
+		&:last-child {
+			display: block;
+		}
+	}
+}
+#hamburger {
+	display: none;
+}
+.social{
+  li{
+    width: 26px;
+    height: 26px;
+    margin: 0 25px;
+
+    &:first-child{
+      margin-left: 0;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  a {
+    font-size: 24px;
+    line-height: 35px;
+  }
+}
+
+/* boostrap 5 col supports */
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    height: 100%;
+}
+.col-xs-15 {
+   	width: calc(20% - 16px);
+    float: left;
+}
+
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: calc(20% - 16px);
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (max-width: 991px) {
+	.topcontent {
+		display: flex;
+		flex-direction: column;
+		> article {
+			&:first-child {
+				order: 3;
+			}
+			&:nth-child(2) {
+				order: 1;
+				margin-bottom: 10px;
+			}
+			&:last-child {
+				order: 4; /* was order: 2 -- changed to fix Federer display bug on mobile 12/6/16 */
+			}
+		}
+	}
+}
+
+.client_logo-wrapper {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	background: white;
+	border-radius: 50%;
+	display: table;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	margin-bottom: 15px;
+}
+.desktop .drawer {
+	display: none;
+}
+.drawer {
+	//width: 80%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	padding: $base_spacing - 20;
+	text-align: center;
+	font-family: "Circular-Bold";
+	display: none;
+	@media screen and (max-width: 640px) and (orientation : landscape){
+		height: 320px;
+		width: 80%;
+		overflow-y: scroll;
+	}
+	ul {
+		text-align: left;
+		margin-left: 0;
+		padding-left: 0;
+		margin-bottom: 60px;
+		li {
+			font-size: 20px;
+			margin-top: $base_spacing - 30;
+			width: 100%;
+			&.selected {
+		        a:before{
+		          content: "";
+		          position: absolute;
+		          bottom: 0;
+		          width: 100%;
+		          left: 0;
+		          border-bottom: 2px solid $primary_color;
+		        }
+		    }
+			a {
+				color: #333;
+				padding-bottom: 3px;
+
+			}
+		}
+	}
+	.social {
+		li {
+			margin: 0 12px;
+			width: auto;
+			&:first-child {
+				margin-left: 0;
+			}
+			&:nth-child(3) {
+				margin: 0 10px;
+			}
+		}
+	}
+}
+
+/* Bubble pop-up */
+.bubble {
+	position: relative;
+	width: 185px;
+	height: 58px;
+	padding: 20px 10px;
+	background: #FFFFFF;
+	border-radius: 3px;
+	border: rgba(0,0,0,0.25) solid 1px;
+	@media screen and (max-width: 640px) {
+		margin-top: 30px;
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+.bubble:after {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 0 10px 10px;
+	border-color: #FFFFFF transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+	top: -10px;
+	left: 36px;
+	@media screen and (max-width: 640px) {
+		left: 110px;
+	}
+}
+
+.bubble:before {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 0 10px 10px;
+	border-color: rgba(0,0,0,0.25) transparent;
+	display: block;
+	width: 0;
+	z-index: 0;
+	top: -11px;
+	left: 36px;
+	@media screen and (max-width: 640px) {
+		left: 110px;
+	}
+}
+
+span.share-text {
+	font-family: "Circular-bold";
+	font-size: 13px;
+}
+
+
+/* Social icons pop-up */
+ul.social-icons {
+	display: none;
+	padding-left: 15px;
+	@media screen and (max-width: 640px) {
+		width: 100%;
+		margin: 10px 0 30px 0;
+	}
+	.bubble-wrapper {
+		width: 300px;
+		margin: 0 auto;
+		height: 100%;
+	}
+	li {
+		float: left;
+		margin-right: 5px;
+		@media screen and (max-width: 640px) {
+			font-size: 20px;
+			float: left;
+			margin-right: 4px;
+			padding: 13px;
+			margin-top: -14px;
+		}
+		a {
+			//border: 1px solid #ccc;
+			border-radius: 50%;
+			padding: 10px;
+			color: #333;
+			&.original-color {
+				&:hover {
+					color: #333;
+				}
+			}
+
+			&:hover {
+				color: $primary_color;
+			}
+			&:active {
+				color: #333;
+			}
+		}
+	}
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.margin-top-md {
+	margin-top: $base_spacing;
+}
+
+.black {
+	width: 100%; height: 100%;
+	position: fixed;
+	background: black;
+	z-index: 99999;
+	left: 0;
+	top: 0;
+	animation: loading 0.5s forwards;
+	animation-delay:1s;
+	main {
+		animation: loadingHide 0.2s forwards;
+		animation-delay: 1s;
+		background: black;
+		h2 {
+			color: white;
+		}
+		p {
+			color: black;
+		}
+		.icon-right-arrow {
+			color: black!important;
+		}
+	}
+	.topnav {
+		height: $fix_header_height;
+		background: black;
+	}
+}
+@keyframes loading {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: 100%;
+	}
+}
+@keyframes loadingHide {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+
+
+// WEBPACK FOOTER //
+// webpack:///stylesheets/Users/jpimenta/pheno-com/stylesheets/_base.scss

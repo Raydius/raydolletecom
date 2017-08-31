@@ -1,0 +1,461 @@
+// custom responsive styles
+
+/**
+ * NOTE: The non-phone devices will get the tab menu
+ */
+@media (max-width: 1024px) {
+  .topnav .tabs li {
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  .culture .headshots .col-sm-4 {
+    width: calc(33.33333% - 16px);
+  }
+  .culture .headshots .col-xs-6 {
+    width: calc(50% - 16px);
+    &:last-of-type {
+      display: none;
+    }
+  }
+  .home .featured-contributors .col-sm-12 {
+    width: 100%;
+    margin: 0 0 60px 0;
+  }
+}
+
+  .topnav .tabs {
+    margin-left: -20px;
+    padding: 0;
+  }
+
+@media (max-width: 768px) {
+  main, .maincontent {
+    padding: 0 $base_spacing - 30;
+  }
+  .topnav .nav-wrapper {
+    margin-top: 30px;
+    padding: 0 $base_spacing - 45;
+  }
+  .topnav .tabs {
+    margin-left: 0;
+    padding: 0;
+  }
+  .topnav .tabs ul {
+    display: flex;
+    margin: 0;
+  }
+  .topnav .tabs li {
+    padding: 0 25px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .topnav .tabs li {
+    font-size: 14px;
+    padding: 0;
+  }
+  .about .top-main p {
+    min-width: 100%;
+  }
+  .contact {
+    .contactbiz {
+      padding-bottom: $base_spacing;
+      .col-md-4 {
+        &:first-of-type {
+          margin-top: 0
+        }
+        //margin-top: $base_spacing + 20;
+      }
+    }
+  }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    main, .maincontent {
+      padding: 0 $base_spacing+30;
+    }
+    .topnav {
+      .nav-wrapper {
+      padding: 30px 10px 0 90px;
+      }
+    }
+    .home .featured-contributors {
+      padding: 0 0 60px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  main, .maincontent {
+      padding: 0 $base_spacing*2;
+    }
+}
+// all non-phone devices
+@media (min-width: 737px) {
+
+  h2{
+    font-size: 60px;
+  }
+
+  //styleguide
+  input, label{
+    font-size: $p_size;
+  }
+
+  input[type="text"], input[type="email"]{
+    height: 50px;
+    line-height: 50px;
+    border-color: 2px solid $gray_font;
+    padding: 0 10px;
+  }
+
+
+  button, input[type="submit"], input[type="reset"]{
+    height: 60px;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: circular-bold;
+    font-weight: lighter;
+    padding: 16px;
+    color: $gray_font;
+    max-width: 227px;
+  }
+  ::-webkit-input-placeholder {
+     color: $gray_font;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+     color: $gray_font;
+  }
+  ::-moz-placeholder {  /* Firefox 19+ */
+     color: $gray_font;
+  }
+  :-ms-input-placeholder {
+   color: $gray_font;
+  }
+
+  .topnav {
+    h1{
+      text-align: left;
+    }
+    img.logo{
+/*       margin: 0 34px; */
+      padding: 0;
+    }
+
+    .nav-wrapper{
+      //padding: 30px $base_spacing*2 0 $base_spacing*2;
+    }
+
+    .tabs li.contact a{
+      color: $primary_color;
+    }
+  }
+
+  //footer
+  footer, .footer{
+    border: none;
+
+    h1{
+      font-size: 28.65px;
+    }
+
+    address, a, h4{
+      font-size: 12px;
+    }
+
+    .footer-wrapper{
+      margin: 0;
+    }
+  }
+
+  //content
+  main, .maincontent {
+    padding-bottom: 0;
+
+    .section{
+        padding: ($base_spacing/2) $base_spacing;
+
+    &.image-component{
+      padding-bottom: ($base_spacing+($base_spacing/2));
+    }
+      }
+
+      .details{
+          padding-left: ($base_spacing*2);
+          padding-right: ($base_spacing*2);
+      }
+  }
+
+  //contact form
+  .input-file{
+     h4, input, label{
+      padding: 0 8px;
+    }
+  }
+
+  .contact{
+    padding-bottom: $base_spacing;
+
+    &.thank-you{
+      padding: 0 ($base_spacing) ($base_spacing/2);
+
+      // add extra whitespace to push footer down on desktop
+      margin-bottom: 310px;
+    }
+
+    .button-wrapper{
+      text-align: left;
+    }
+
+    h4{
+      font-size: 18px;
+    }
+
+    form{
+      padding-bottom: 0;
+    }
+
+    h2{
+      margin-top: 0;
+    }
+  }
+
+  .help-block{
+    margin-top: -20px;
+  }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .topnav .logo-wrapper.fixed {
+    margin-right: 0;
+  }
+  .contact .contactbiz span {
+    font-size: 13px;
+  }
+  footer .social li, .footer .social li {
+    margin: 0 5px;
+    width: 23px;
+  }
+}
+.top-main h2 {
+@media (min-width:640px) and (max-width:1120px){
+  font-size: 50px !important;
+  line-height: 62px !important;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+    .topnav img.logo {
+      margin: 0 -3px;
+    }
+    .topnav .tabs ul {
+      padding: 0;
+    }
+    .topnav .tabs li {
+      margin: 0 15px;
+    }
+}
+@media (max-width: 640px) {
+  .mobile-full {
+    padding: 0;
+    margin: 0;
+  }
+  .top-main h2 blockquote,  {
+    font-size: 30px;
+    line-height: 34px;
+    &:before {
+      left: -16px;
+    }
+  }
+  .home .top-main h2, .about .top-main h2, .culture .top-main h2 {
+    font-size: 28px;
+    padding-right: 150px;
+    line-height: 34px;
+  }
+  .work.work-details {
+    .top-main h2 blockquote {
+        &:first-letter {
+          padding-left: 0;
+        }
+      }
+  }
+  .work p span.red {
+    font-size:20px;
+    line-height: 26px;
+  }
+  .work h2 blockquote {
+    width: 100% !important;
+    padding-left: 0px;
+    font-size: 30px !important;
+  }
+  .work .more-case-wrapper.desktop, .work .more-cases > a {
+    display: none;
+  }
+  .work .more-cases > span {
+    float: none;
+    display: block;
+    padding: 40px 0;
+  }
+  .topnav .nav-wrapper {
+    padding-top: 15px;
+    margin: 0;
+    .logo-wrapper {
+      width: 100%;
+      img {
+        width: 160px;
+        position: relative;
+        left: 50%;
+        margin-left: -80px;
+      }
+    }
+
+  }
+  .topnav .tabs {
+    display: none;
+  }
+  #hamburger {
+    display: block;
+  }
+  .work .col-md-12, .col-md-8 {
+    padding: 0;
+  }
+  .work .col-md-12 .col-md-4 {
+    padding: $base_spacing/2;
+  }
+  .work > article p span.red {
+    margin-left: 0;
+  }
+  .work.work-details .project-detail aside label.icon-share {
+    margin-top: 0;
+  }
+  .work > article:nth-of-type(even) .col-md-8 {
+    padding-right: 0;
+  }
+  .home .featured-contributors label {
+    font-size: 16px;
+  }
+  .culture .top-main {
+    margin-top: 0;
+  }
+  .culture .col-md-3 {
+    img {
+      width: 150px;
+      margin: 0 auto;
+    }
+  }
+  main, .maincontent {
+    padding: 0;
+  }
+  h3 blockquote {
+    width: auto;
+  }
+  .home .featured-contributors h6 {
+    width: 100%;
+  }
+  .top-main {
+    border-bottom: 0;
+    padding: ($base_spacing - 40) 30px;
+  }
+  .jobs img:not(.pheno-p-jobs) {
+    margin-top: 0;
+    margin-left: -40px;
+  }
+  .jobs .top-main h2 {
+    margin-top: 30px;
+  }
+  .work .col-md-12.top-main {
+    padding: 20px 30px;
+  }
+  .work .col-md-12 {
+    margin-bottom: $base_spacing - 20;
+  }
+  .work .top-description p span.red {
+    margin-left: 0;
+  }
+  .work.work-details h2 blockquote {
+    font-size: 36px;
+    line-height: 44px;
+    width: 640px;
+  }
+  #toggle-project-detail:checked {
+    ~ label {
+      color: $primary_color;
+    }
+  }
+  #toggle-project-detail:checked ~ .detail-wrapper {
+    display: block;
+    width: 300px;
+  }
+  .culture article.table {
+    display: block;
+  }
+
+  .culture article.table > div {
+    display: block;
+  }
+  .work.work-details .top-main {
+    margin-bottom: 0;
+  }
+  .work.work-details .project-detail {
+    .col-md-12 {
+      margin-bottom: 0;
+    }
+    aside {
+      float: left;
+      position: relative;
+      &:first-of-type {
+        margin-left: 10px;
+      }
+      .icon-dot {
+        &:before {
+        }
+      }
+      .icon-share {
+        &:before {
+          font-family: icomoon!important;
+        }
+      }
+      input {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100px;
+        height: 30px;
+        opacity: 0;
+      }
+      label {
+        display: inline-block;
+        padding-left: 20px;
+        padding-left: 0;
+        margin-bottom: $base_spacing - 20;
+        &.share {
+          font-family: "Circular-Book"!important;
+        }
+      }
+    }
+    .detail-wrapper {
+      legend {
+        width: 100px;
+        float: left;
+      }
+    }
+  }
+  .detail-wrapper {
+    display: none;
+  }
+}
+@media (min-width: 640px) {
+  .work .more-case-wrapper.mobile {
+    display: none;
+  }
+}
+@media (max-width: 768px) and (min-width: 640px) {
+  main, .maincontent, .topnav .nav-wrapper {
+    padding: 0 30px;
+  }
+}

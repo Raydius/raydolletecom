@@ -1,0 +1,14 @@
+version: '2'
+services:
+  rdghost:
+    image: ghost:latest
+    networks:
+      - rd-net
+    env_file: ./ghost/ghost.env
+    volumes:
+      - ./ghost/content:/var/lib/ghost/content
+    ports:
+      - "2099:2368"
+networks:
+  rd-net:
+    driver: bridge
