@@ -1,0 +1,92 @@
+{
+  "header": {
+    "logo": "Ray Dollete",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "title": "Welcome to Ray Dollete",
+    "description": "Your one-stop solution for web development and design.",
+    "button": "Learn More"
+  },
+  "features": {
+    "title": "Our Features",
+    "cards": [
+      {
+        "title": "Feature 1",
+        "description": "Description of feature 1."
+      },
+      {
+        "title": "Feature 2",
+        "description": "Description of feature 2."
+      },
+      {
+        "title": "Feature 3",
+        "description": "Description of feature 3."
+      }
+    ]
+  },
+  "services": {
+    "title": "Our Services",
+    "items": [
+      {
+        "title": "Service 1",
+        "description": "Description of service 1."
+      },
+      {
+        "title": "Service 2",
+        "description": "Description of service 2."
+      },
+      {
+        "title": "Service 3",
+        "description": "Description of service 3."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Enter your message"
+      },
+      "button": "Send Message"
+    }
+  },
+  "footer": {
+    "content": "© 2025 Ray Dollete. All rights reserved.",
+    "socialLinks": [
+      "Facebook",
+      "Twitter",
+      "LinkedIn"
+    ]
+  },
+  "homePage": {
+    "title": "Home Page Title",
+    "description": "Description of the home page."
+  },
+  "aboutPage": {
+    "title": "About Us",
+    "description": "Description of the about page."
+  },
+  "servicesPage": {
+    "title": "Our Services",
+    "description": "Description of the services page."
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "description": "Description of the contact page."
+  }
+}
