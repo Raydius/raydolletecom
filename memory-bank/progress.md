@@ -20,7 +20,7 @@
   - Enhanced with more pronounced brushed effect based on feedback
   - Refined to pure horizontal brushed lines using repeating linear gradients
   - Added SVG noise texture for realistic metal grain
-  - Implemented light reflection animation that moves across the header
+  - Implemented light reflection animation (later removed per user preference)
   - Updated text colors for better contrast against dark background
   - Enhanced shadow effects for depth and dimension
   - Ensured responsive design maintained in mobile view

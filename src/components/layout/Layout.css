@@ -21,7 +21,6 @@ main {
   padding: 1rem 2rem;
   background-color: #1e1e22;
   position: relative;
-  overflow: hidden;
   background-image:
     /* Horizontal brushed lines - repeating thin lines */
     repeating-linear-gradient(0deg,
@@ -52,63 +51,6 @@ main {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Add subtle light reflection animation */
-.header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -150%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.05) 25%,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgba(255, 255, 255, 0.05) 75%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  transform: skewX(-25deg);
-  animation: shine 8s infinite linear;
-}
-
-@keyframes shine {
-  0% {
-    left: -150%;
-  }
-  100% {
-    left: 150%;
-  }
-}
-
-/* Add subtle light reflection animation */
-.header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -150%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.05) 25%,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgba(255, 255, 255, 0.05) 75%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  transform: skewX(-25deg);
-  animation: shine 8s infinite linear;
-}
-
-@keyframes shine {
-  0% {
-    left: -150%;
-  }
-  100% {
-    left: 150%;
-  }
-}
 
 .logo h1 {
   margin: 0;

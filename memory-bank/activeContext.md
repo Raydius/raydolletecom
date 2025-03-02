@@ -22,9 +22,9 @@
 - Implemented dark brushed metal background for the header with:
   - Pure horizontal brushed lines using repeating linear gradients
   - SVG noise texture for metal grain
-  - Light reflection animation that moves across the header
   - Updated text colors for better contrast
   - Enhanced shadow effects for depth
+  - Removed animation based on user preference
 
 ## Current Goals
 - Enhance content for each page with more specific information
