@@ -16,7 +16,7 @@ This is a personal website for Ray Dollete, built with React, TypeScript, and Vi
 - Recruiters
 
 ## Technical Stack
-- Frontend: React 19 with TypeScript
+- Frontend: React with TypeScript
 - Build Tool: Vite
 - Styling: CSS (with potential for enhancement)
 - Deployment: TBD
@@ -40,3 +40,24 @@ This Memory Bank contains the following core files:
 - Must be responsive and work well on mobile devices
 - Should load quickly and be performant
 - Should follow accessibility best practices
+
+## Open Questions and Decisions
+1. **Specific Work Samples**:
+   - **Decision**: To be determined based on recent work and projects.
+   - **Rationale**: Important for showcasing relevant experience.
+   - **Implementation**: Will be documented as samples are selected.
+
+2. **Need for a Blog or News Section**:
+   - **Decision**: Not needed for initial launch.
+   - **Rationale**: Maintains focus on showcasing work and providing contact information.
+   - **Implementation**: Can be added in future iterations if needed.
+
+3. **Deployment Platform**:
+   - **Decision**: GitHub Pages will be used for initial deployment.
+   - **Rationale**: Cost-effective and integrates well with GitHub.
+   - **Implementation**: Will be configured in `vite.config.ts`.
+
+4. **Design Preferences or Inspirations**:
+   - **Decision**: Modern, clean design with a focus on readability.
+   - **Rationale**: Professional and easy to navigate.
+   - **Implementation**: Will be guided by design principles and best practices.

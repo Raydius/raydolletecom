@@ -1,15 +1,22 @@
-import React from 'react'
-import staticCopy from '../staticCopy.json'
+import React from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import HeroSection from '../components/Home/HeroSection';
+import AboutSection from '../components/Home/AboutSection';
+import PortfolioSection from '../components/Home/PortfolioSection';
+import ContactSection from '../components/Home/ContactSection';
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return (
-    <section className="home-page" id="home">
-      <div className="home-content">
-        <h2>{staticCopy.homePage.title}</h2>
-        <p>{staticCopy.homePage.description}</p>
-      </div>
-    </section>
-  )
-}
+    <div className="home-page">
+      <Header />
+      <HeroSection />
+      <AboutSection />
+      <PortfolioSection />
+      <ContactSection />
+      <Footer />
+    </div>
+  );
+};
 
-export default HomePage
+export default HomePage;

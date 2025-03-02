@@ -3,8 +3,10 @@
     "logo": "Ray Dollete",
     "nav": {
       "home": "Home",
-      "about": "About",
-      "services": "Services",
+	  "tech": "Technology",
+	  "dj": "DJ",
+      "music": "Music",
+      "cars": "Cars",
       "contact": "Contact"
     }
   },

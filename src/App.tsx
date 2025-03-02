@@ -10,10 +10,11 @@ function App() {
         </div>
         <nav className="nav">
           <ul>
-            <li><a href="#home">{staticCopy.header.nav.home}</a></li>
-            <li><a href="#about">{staticCopy.header.nav.about}</a></li>
-            <li><a href="#services">{staticCopy.header.nav.services}</a></li>
-            <li><a href="#contact">{staticCopy.header.nav.contact}</a></li>
+            {Object.entries(staticCopy.header.nav).map(([key, value]) => (
+              <li key={key}>
+                <a href={`#${key}`}>{value}</a>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
