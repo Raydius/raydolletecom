@@ -1,53 +1,64 @@
 # System Patterns
 
-This document outlines the architectural patterns, coding conventions, and design principles used in the Ray Dollete personal website.
+## Component Structure
 
-## Component Architecture
+### Page Layout Pattern
+The website follows a consistent layout pattern:
+- Header with navigation
+- Main content area with multiple sections
+- Footer with copyright and social links
 
-### Component Organization
-- **Page Components**: Top-level components that represent entire pages
-- **Layout Components**: Components that define the structure of the page (Header, Footer, etc.)
-- **Feature Components**: Reusable components that implement specific features
-- **UI Components**: Small, reusable UI elements like buttons, cards, etc.
+### Content Management Pattern
+Content is managed through a centralized JSON file:
+- `staticCopy.json` contains all text content
+- Components reference this file for their display text
+- This pattern separates content from presentation
+- Makes content updates and translations easier to manage
 
-### Component Structure
-```
-src/
-  components/
-    ui/           # Reusable UI components
-    layout/       # Layout components
-    features/     # Feature-specific components
-  pages/          # Page components
-  assets/         # Static assets
-  styles/         # Global styles
-  utils/          # Utility functions
-  hooks/          # Custom React hooks
-  context/        # React context providers
-```
+### Section Pattern
+Each major section follows a consistent pattern:
+- Section container with id for navigation
+- Section heading
+- Content specific to that section
+
+## Naming Conventions
+
+### Component Naming
+- PascalCase for component names (e.g., `App`)
+- Descriptive names that reflect the component's purpose
+
+### CSS Class Naming
+- kebab-case for CSS class names (e.g., `hero-content`)
+- Class names reflect the component or element they style
+- Follows a component-based approach rather than utility classes
+
+### File Organization
+- Components in their own files
+- Related assets grouped together
+- Separation of concerns between content and presentation
 
 ## Styling Approach
-- CSS files co-located with components
-- Consistent naming conventions
-- Responsive design using media queries
+
+### CSS Organization
+- Component-specific CSS
+- Global styles for consistent theming
+- Responsive design considerations
+
+### Responsive Design Pattern
 - Mobile-first approach
+- Breakpoints for different device sizes
+- Flexible layouts that adapt to screen size
 
-## State Management
-- React's built-in state management with hooks
-- Context API for global state if needed
+## Future Pattern Considerations
 
-## Performance Considerations
-- Lazy loading for images
-- Code splitting for larger components
-- Optimized asset delivery
+### State Management
+- Currently using simple props
+- May need more robust state management as complexity grows
 
-## Accessibility Guidelines
-- Semantic HTML
-- ARIA attributes where necessary
-- Keyboard navigation support
-- Color contrast compliance
+### Data Fetching
+- Currently using static JSON
+- May need API integration for dynamic content
 
-## Coding Conventions
-- Functional components with hooks
-- TypeScript interfaces for props
-- Consistent naming patterns
-- Documentation for complex logic
+### Component Composition
+- Consider more reusable, smaller components
+- Implement consistent prop patterns for component configuration
