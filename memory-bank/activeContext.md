@@ -9,6 +9,7 @@
 - Maintained header across all routes
 - Added CSS styling for layout and pages
 - Created refined dark brushed metal background for the header
+- Improved navigation link focus styling with white underline instead of blue box
 
 ## Recent Changes
 - Installed React Router
@@ -25,6 +26,7 @@
   - Updated text colors for better contrast
   - Enhanced shadow effects for depth
   - Removed animation based on user preference
+- Replaced blue focus box on navigation links with bold white underline for better visual consistency
 
 ## Current Goals
 - Enhance content for each page with more specific information

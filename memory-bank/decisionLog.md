@@ -79,6 +79,27 @@
   - Increased the main shadow for better separation from content
 - Darkened the base color for better contrast with the metallic highlights
 
+## March 2, 2025 - Navigation Link Focus Styling
+
+**Context:** The default blue focus box around navigation links was inconsistent with the site's design aesthetic.
+
+**Decision:** Replaced the blue focus box with a bold white underline for navigation links.
+
+**Rationale:**
+- Improves visual consistency with the site's design language
+- Maintains accessibility by providing clear visual feedback for keyboard navigation
+- Creates a more elegant and subtle focus indicator
+- Aligns with the white text color used in the navigation
+- Provides a cleaner, more intentional design
+
+**Implementation:**
+- Added specific CSS for `.nav a:focus` in Layout.css
+- Removed the default outline using `outline: none`
+- Added a 3px solid white border-bottom for the underline effect
+- Increased font-weight to 600 for better visibility when focused
+- Added position: relative and padding-bottom to accommodate the underline
+- Included the border-bottom in the transition properties for smooth animation
+
 ## Future Decisions to Consider
 
 ### Visual Design System

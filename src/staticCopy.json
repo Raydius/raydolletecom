@@ -2,11 +2,11 @@
   "header": {
     "logo": "Ray Dollete",
     "nav": {
-      "home": "Home",
 	  "tech": "Technology",
 	  "dj": "DJ",
       "music": "Music",
       "cars": "Cars",
+	  "gaming": "Gaming",
       "contact": "Contact"
     }
   },
