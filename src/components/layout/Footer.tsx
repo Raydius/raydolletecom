@@ -6,9 +6,9 @@ const Footer = () => {
       <div className="footer-content">
         <p>{staticCopy.footer.content}</p>
         <div className="social-links">
-          {staticCopy.footer.socialLinks.map((link, index) => (
-            <a key={index} href="#" className="social-link">
-              {link}
+          {Object.keys(staticCopy.footer.socialLinks).map((key) => (
+            <a key={key} href={staticCopy.footer.socialLinks[key as keyof typeof staticCopy.footer.socialLinks]} className="social-link">
+              {key}
             </a>
           ))}
         </div>

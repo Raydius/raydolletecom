@@ -69,11 +69,11 @@
   },
   "footer": {
     "content": "© 2025 Ray Dollete. All rights reserved.",
-    "socialLinks": [
-      "Facebook",
-      "Twitter",
-      "LinkedIn"
-    ]
+    "socialLinks": {
+      "Bluesky": "https://bsky.app/profile/raydollete.com",
+      "Instagram": "https://www.instagram.com/raytalkstech",
+      "LinkedIn": "https://www.linkedin.com/in/raydollete/"
+	}
   },
   "homePage": {
     "title": "Home Page Title",
