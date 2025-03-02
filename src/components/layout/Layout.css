@@ -13,24 +13,112 @@ main {
   padding: 20px;
 }
 
-/* Header styles */
+/* Header styles with pure horizontal brushed metal effect */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #f8f9fa;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #1e1e22;
+  position: relative;
+  overflow: hidden;
+  background-image:
+    /* Horizontal brushed lines - repeating thin lines */
+    repeating-linear-gradient(0deg,
+      rgba(40, 40, 45, 0.9) 0px,
+      rgba(40, 40, 45, 0.9) 1px,
+      rgba(50, 50, 55, 0.9) 1px,
+      rgba(50, 50, 55, 0.9) 2px,
+      rgba(45, 45, 50, 0.9) 2px,
+      rgba(45, 45, 50, 0.9) 3px,
+      rgba(35, 35, 40, 0.9) 3px,
+      rgba(35, 35, 40, 0.9) 4px
+    ),
+    /* Subtle horizontal highlights */
+    repeating-linear-gradient(0deg,
+      rgba(60, 60, 70, 0.3) 0px,
+      rgba(60, 60, 70, 0.3) 10px,
+      rgba(70, 70, 80, 0.3) 10px,
+      rgba(70, 70, 80, 0.3) 20px
+    ),
+    /* Enhanced noise texture for metal grain */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.15'/%3E%3C/svg%3E");
+  background-size: 100% 100%, 100% 100%, 150px 150px;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Add subtle light reflection animation */
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  animation: shine 8s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+/* Add subtle light reflection animation */
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  animation: shine 8s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
 }
 
 .logo h1 {
   margin: 0;
   font-size: 1.5rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .logo a {
   text-decoration: none;
-  color: inherit;
+  color: #e0e0e0;
 }
 
 .nav ul {
@@ -46,13 +134,14 @@ main {
 
 .nav a {
   text-decoration: none;
-  color: #333;
+  color: #c0c0c0;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .nav a:hover {
-  color: #007bff;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
 }
 
 /* Footer styles */

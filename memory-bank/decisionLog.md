@@ -53,6 +53,37 @@
 - Updated navigation links to use React Router's Link component
 - Maintained the same visual design and content structure
 
+## March 2, 2025 - Header Styling with Refined Dark Brushed Metal
+
+**Context:** The header needed a distinctive visual style that would stand out and create a professional, premium appearance. Initial implementation was too subtle, and an enhanced version created unwanted vertical columns.
+
+**Decision:** Refined the dark brushed metal background effect for the header with pure horizontal brushed lines and a light reflection animation.
+
+**Rationale:**
+- Creates a distinctive, premium look that stands out from the content
+- Provides a consistent visual anchor across all pages
+- Aligns with technical/professional nature of the portfolio
+- Dark metal provides good contrast for navigation text
+- Horizontal brushed texture accurately represents real brushed metal
+- Animation adds subtle dynamism that enhances the metallic appearance
+
+**Implementation:**
+- Used repeating horizontal linear gradients to create thin brushed lines:
+  - Created a pattern of alternating light and dark horizontal lines
+  - Used 0deg direction to ensure purely horizontal brushing
+  - Adjusted opacity and color values for better visibility
+- Added a second repeating gradient for subtle horizontal highlights
+- Kept the SVG noise texture for realistic metal grain
+- Implemented a subtle light reflection animation that moves across the header:
+  - Used a pseudo-element with skewed transform
+  - Created a gradient that simulates light reflecting off metal
+  - Added animation to move the reflection across the header
+- Enhanced box-shadow and border effects for better depth and dimension:
+  - Added inset shadows at top and bottom
+  - Used border-top with light color for edge highlight
+  - Increased the main shadow for better separation from content
+- Darkened the base color for better contrast with the metallic highlights
+
 ## Future Decisions to Consider
 
 ### Visual Design System
